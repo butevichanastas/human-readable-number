@@ -29,8 +29,16 @@ module.exports = function toReadable (number) {
   const oneHundred = 'hundred';
 }
 
-333 = 3*100 + 30 + 3
+333 = 3*100 + 3*10 + 3
 'three hundred thirty three'
 
-let str = String(Number);
+let number = 569;
+let str = number.toString();
 let length = str.length;
+
+
+let number = 569;
+let str = number.toString().split('');
+ 
+console.log(str);
+
