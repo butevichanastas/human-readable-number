@@ -1,4 +1,5 @@
 module.exports = function toReadable (number) {
+
   const zero = 'zero';
   const one = 'one';
   const two = 'two';
@@ -34,52 +35,104 @@ module.exports = function toReadable (number) {
   const oneHundred = 'hundred';
 
 const str = number.toString();
-if (str[str.length - 1] === 0) {
-  return zero
+const ones = Number(str[str.length - 1])
+const desyatki = Number(str[str.length - 2])
+const sotni = Number(str[str.length - 3])
+let result = ""
+
+
+if (ones === 0) {
+  result = zero
 }
-if (str[str.length - 1] === 1) {
-  return one
+if (ones === 1) {
+ result = one
 }
-if (str[str.length - 1] === 2) {
-  return two
+if (ones === 2) {
+  result = two
 }
-if (str[str.length - 1] === 3) {
-  return three
+if (ones === 3) {
+  result = three
 }
-if (str[str.length - 1] === 4) {
-  return four
+if (ones === 4) {
+  result = four
 }
-if (str[str.length - 1] === 5) {
-  return five
+if (ones === 5) {
+  result = five
 }
-if (str[str.length - 1] === 6) {
-  return six
+if (ones === 6) {
+  result = six
 }
-if (str[str.length - 1] === 7) {
-  return seven
+if (ones === 7) {
+  result = seven
 }
-if (str[str.length - 1] === 8) {
-  return eight
+if (ones === 8) {
+  result = eight
 }
-if (str[str.length - 1] === 9) {
-  return nine
+if (ones === 9) {
+  result = nine
 }
+if (desyatki === 0) {
+  result = zero + ' ' + result
+}
+if (desyatki === 1) {
+ result = one + ' ' + result
+}
+if (desyatki === 2) {
+  result = two + ' ' + result
+}
+if (desyatki === 3) {
+  result = three + ' ' + result
+}
+if (desyatki === 4) {
+  result = four + ' ' + result
+}
+if (desyatki === 5) {
+  result = five + ' ' + result
+}
+if (desyatki === 6) {
+  result = six + ' ' + result
+}
+if (desyatki === 7) {
+  result = seven + ' ' + result
+}
+if (desyatki === 8) {
+  result = eight + ' ' + result
+}
+if (desyatki === 9) {
+  result = nine + ' ' + result
+}
+if (sotni === 1) {
+ result = one + ' hundred ' + result
+}
+if (sotni === 2) {
+  result = two + ' hundred ' + result
+}
+if (sotni === 3) {
+  result = three + ' hundred ' + result
+}
+if (sotni === 4) {
+  result = four + ' hundred ' + result
+}
+if (sotni === 5) {
+  result = five + ' hundred ' + result
+}
+if (sotni === 6) {
+  result = six + ' hundred ' + result
+}
+if (sotni === 7) {
+  result = seven + ' hundred ' + result
+}
+if (sotni === 8) {
+  result = eight + ' hundred ' + result
+}
+if (sotni === 9) {
+  result = nine + ' hundred ' + result
+}
+
+return result
 
 }
 
-
-
-
-
-// 333 = 3*100 + 3*10 + 3
-// 'three hundred thirty three'
-
-// let number = 569;
-// let str = number.toString();
-// let length = str.length;
-
-
-// let number = 569;
-// let str = number.toString().split('');
+console.log(toReadable(536))
 
 
