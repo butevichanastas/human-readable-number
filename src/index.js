@@ -10,9 +10,7 @@ module.exports = function toReadable (number) {
   const seven = 'seven';
   const eight = 'eight';
   const nine = 'nine';
-
   const ten = 'ten';
-
   const eleven = 'eleven';
   const twelve = 'twelve';
   const thirteen = 'thirteen';
@@ -23,7 +21,6 @@ module.exports = function toReadable (number) {
   const eighteen = 'eighteen';
   const nineteen = 'nineteen';
   const twenty = 'twenty';
-
   const thirty = 'thirty';
   const forty = 'forty';
   const fifty = 'fifty';
@@ -31,7 +28,6 @@ module.exports = function toReadable (number) {
   const seventy = 'seventy';
   const eighty = 'eighty';
   const ninety = 'ninety';
-
   const oneHundred = 'hundred';
 
 const str = number.toString();
@@ -41,7 +37,7 @@ const sotni = Number(str[str.length - 3])
 let result = ""
 
 
-if (ones === 0) {
+if (number === 0) {
   result = zero
 }
 if (ones === 1) {
@@ -71,32 +67,83 @@ if (ones === 8) {
 if (ones === 9) {
   result = nine
 }
-if (desyatki === 1) {
- result = one + ' ' + result
+if (desyatki === 1 && ones === 0) {
+ result = ten
 }
+if (desyatki === 1 && ones === 1) {
+ result = eleven
+}
+if (desyatki === 1 && ones === 2) {
+ result = twelve
+}
+if (desyatki === 1 && ones === 3) {
+ result = thirteen
+}
+if (desyatki === 1 && ones === 4) {
+ result = fourteen
+}
+if (desyatki === 1 && ones === 5) {
+ result = fifteen
+}
+if (desyatki === 1 && ones === 6) {
+ result = sixteen
+}
+if (desyatki === 1 && ones === 7) {
+ result = seventeen
+}
+if (desyatki === 1 && ones === 8) {
+ result = eighteen
+}
+if (desyatki === 1 && ones === 9) {
+ result = nineteen
+}  
 if (desyatki === 2) {
   result = twenty + ' ' + result
+}
+if (desyatki === 2 && ones === 0) {
+  result = twenty
 }
 if (desyatki === 3) {
   result = thirty + ' ' + result
 }
+if (desyatki === 3 && ones === 0) {
+  result = thirty
+}
 if (desyatki === 4) {
   result = forty + ' ' + result
+}
+if (desyatki === 4 && ones === 0) {
+  result = forty
 }
 if (desyatki === 5) {
   result = fifty + ' ' + result
 }
+if (desyatki === 5 && ones === 0) {
+  result = fifty
+}
 if (desyatki === 6) {
   result = sixty + ' ' + result
+}
+if (desyatki === 6 && ones === 0) {
+  result = sixty
 }
 if (desyatki === 7) {
   result = seventy + ' ' + result
 }
+if (desyatki === 7 && ones === 0) {
+  result = seventy
+}
 if (desyatki === 8) {
   result = eighty + ' ' + result
 }
+if (desyatki === 8 && ones === 0) {
+  result = eighty
+}
 if (desyatki === 9) {
   result = ninety + ' ' + result
+}
+if (desyatki === 9 && ones === 0) {
+  result = ninety
 }
 if (sotni === 1) {
  result = one + ' hundred ' + result
@@ -126,10 +173,6 @@ if (sotni === 9) {
   result = nine + ' hundred ' + result
 }
 
-return result
+return result.trim()
 
 }
-
-console.log(toReadable(999))
-
-
