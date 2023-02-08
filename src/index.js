@@ -71,35 +71,32 @@ if (ones === 8) {
 if (ones === 9) {
   result = nine
 }
-if (desyatki === 0) {
-  result = zero + ' ' + result
-}
 if (desyatki === 1) {
  result = one + ' ' + result
 }
 if (desyatki === 2) {
-  result = two + ' ' + result
+  result = twenty + ' ' + result
 }
 if (desyatki === 3) {
-  result = three + ' ' + result
+  result = thirty + ' ' + result
 }
 if (desyatki === 4) {
-  result = four + ' ' + result
+  result = forty + ' ' + result
 }
 if (desyatki === 5) {
-  result = five + ' ' + result
+  result = fifty + ' ' + result
 }
 if (desyatki === 6) {
-  result = six + ' ' + result
+  result = sixty + ' ' + result
 }
 if (desyatki === 7) {
-  result = seven + ' ' + result
+  result = seventy + ' ' + result
 }
 if (desyatki === 8) {
-  result = eight + ' ' + result
+  result = eighty + ' ' + result
 }
 if (desyatki === 9) {
-  result = nine + ' ' + result
+  result = ninety + ' ' + result
 }
 if (sotni === 1) {
  result = one + ' hundred ' + result
@@ -133,6 +130,6 @@ return result
 
 }
 
-console.log(toReadable(536))
+console.log(toReadable(999))
 
 
